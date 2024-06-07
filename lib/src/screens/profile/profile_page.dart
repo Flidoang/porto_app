@@ -3,6 +3,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:porto/src/data/service.dart';
 import 'package:porto/src/partials/thema.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -20,6 +21,8 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+    final urlService urlController = urlService();
+
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 50),
@@ -62,7 +65,65 @@ class _ProfilePageState extends State<ProfilePage> {
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
-            )
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: brown2,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      urlController.fetchGit();
+                    },
+                    icon: Icon(
+                      Icons.person_2_outlined,
+                      size: 100,
+                      color: brown1,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: brown2,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      urlController.fetchLinkedIn();
+                    },
+                    icon: Icon(
+                      Icons.person_2_outlined,
+                      size: 100,
+                      color: brown1,
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: brown2,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      urlController.fethInstagram();
+                    },
+                    icon: Icon(
+                      Icons.person_2_outlined,
+                      size: 100,
+                      color: brown1,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
