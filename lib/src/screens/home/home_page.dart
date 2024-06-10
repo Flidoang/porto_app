@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:porto/src/partials/thema.dart';
+import 'package:get/get.dart';
+import 'package:porto/src/screens/detail_page/detail_bumdes_page.dart';
+import 'package:porto/src/screens/detail_page/detail_perpus_page.dart';
+import 'package:porto/src/screens/detail_page/detail_salon_page.dart';
 
 class HomePage extends StatefulWidget {
   final NotchBottomBarController? controller;
@@ -203,7 +207,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Flexible(
-                          flex: 4,
                           child: Container(
                             margin: EdgeInsets.only(bottom: 10),
                             decoration: BoxDecoration(
@@ -215,34 +218,35 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Flexible(
-                          flex: 1,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: yellow.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(12),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: yellow.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: ListTile(
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 10),
+                            leading: Text(
+                              'Bumdes Application',
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 14,
+                                color: grey,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            child: ListTile(
-                              leading: Text(
-                                'Bumdes Application',
-                                style: GoogleFonts.nunitoSans(
-                                  fontSize: 14,
-                                  color: grey,
-                                  fontWeight: FontWeight.bold,
+                            trailing: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: black.withOpacity(0.7),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                              trailing: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: black.withOpacity(0.7),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  'Lihat',
-                                  style: GoogleFonts.nunitoSans(color: grey2),
-                                ),
+                              onPressed: () {
+                                Get.to(DetailBumdesPage());
+                              },
+                              child: Text(
+                                'Lihat',
+                                style: GoogleFonts.nunitoSans(color: grey2),
                               ),
                             ),
                           ),
@@ -267,7 +271,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Flexible(
-                          flex: 4,
                           child: Container(
                             margin: EdgeInsets.only(bottom: 10),
                             decoration: BoxDecoration(
@@ -279,34 +282,33 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Flexible(
-                          flex: 1,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: yellow.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(12),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: yellow.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: ListTile(
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 10),
+                            leading: Text(
+                              'Perpustakaan Application',
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 14,
+                                color: grey,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            child: ListTile(
-                              leading: Text(
-                                'Perpustakaan Application',
-                                style: GoogleFonts.nunitoSans(
-                                  fontSize: 14,
-                                  color: grey,
-                                  fontWeight: FontWeight.bold,
+                            trailing: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: black.withOpacity(0.7),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                              trailing: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: black.withOpacity(0.7),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  'Lihat',
-                                  style: GoogleFonts.nunitoSans(color: grey2),
-                                ),
+                              onPressed: () => Get.to(DetailPerpusPage()),
+                              child: Text(
+                                'Lihat',
+                                style: GoogleFonts.nunitoSans(color: grey2),
                               ),
                             ),
                           ),
@@ -331,7 +333,6 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Flexible(
-                          flex: 4,
                           child: Container(
                             margin: EdgeInsets.only(bottom: 10),
                             decoration: BoxDecoration(
@@ -343,34 +344,35 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Flexible(
-                          flex: 1,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: yellow.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(12),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: yellow.withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: ListTile(
+                            contentPadding:
+                                EdgeInsets.symmetric(horizontal: 10),
+                            leading: Text(
+                              'Salon Application',
+                              style: GoogleFonts.nunitoSans(
+                                fontSize: 14,
+                                color: grey,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            child: ListTile(
-                              leading: Text(
-                                'Salon Application',
-                                style: GoogleFonts.nunitoSans(
-                                  fontSize: 14,
-                                  color: grey,
-                                  fontWeight: FontWeight.bold,
+                            trailing: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: black.withOpacity(0.7),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
-                              trailing: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: black.withOpacity(0.7),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  'Lihat',
-                                  style: GoogleFonts.nunitoSans(color: grey2),
-                                ),
+                              onPressed: () {
+                                Get.to(DetailSalonPage());
+                              },
+                              child: Text(
+                                'Lihat',
+                                style: GoogleFonts.nunitoSans(color: grey2),
                               ),
                             ),
                           ),
