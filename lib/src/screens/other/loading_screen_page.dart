@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:porto/src/partials/thema.dart';
 import 'package:porto/src/screens/other/opening_page.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromRGBO(88, 64, 47, 1),
+        backgroundColor: grey,
         body: Center(
           child: loading(),
         ),
@@ -43,7 +44,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   Widget loading() {
     return LoadingAnimationWidget.inkDrop(
-      color: Color.fromRGBO(189, 171, 158, 1),
+      color: grey2,
       size: 60,
     );
   }

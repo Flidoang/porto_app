@@ -98,7 +98,7 @@ class _OpeningPageState extends State<OpeningPage> {
                     height: 13,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: curentSlide == index ? brown1 : brown2,
+                      color: curentSlide == index ? grey : white,
                     ),
                   ),
                 ),
@@ -110,6 +110,7 @@ class _OpeningPageState extends State<OpeningPage> {
                   padding: const EdgeInsets.fromLTRB(70, 0, 70, 30),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: grey,
                       padding: EdgeInsets.symmetric(vertical: 20),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -129,7 +130,7 @@ class _OpeningPageState extends State<OpeningPage> {
                         Text(
                           'Mulai!!',
                           style: GoogleFonts.karla(
-                            color: brown1,
+                            color: grey2,
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),
@@ -139,7 +140,7 @@ class _OpeningPageState extends State<OpeningPage> {
                         ),
                         Icon(
                           Icons.arrow_circle_right_outlined,
-                          color: brown1,
+                          color: grey2,
                         )
                       ],
                     ),

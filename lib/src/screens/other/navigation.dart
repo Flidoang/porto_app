@@ -47,7 +47,7 @@ class _NavigationPageState extends State<NavigationPage> {
           ? AnimatedNotchBottomBar(
               /// Provide NotchBottomBarController
               notchBottomBarController: _controller,
-              color: brown1,
+              color: black,
               showLabel: true,
               textOverflow: TextOverflow.visible,
               maxLine: 1,
@@ -60,7 +60,7 @@ class _NavigationPageState extends State<NavigationPage> {
               //   colors: [Colors.red, Colors.green, Colors.orange],
               //   tileMode: TileMode.mirror,
               // ).createShader(Rect.fromCircle(center: Offset.zero, radius: 8.0)),
-              notchColor: Color.fromARGB(221, 75, 52, 52),
+              notchColor: yellow,
 
               /// restart app if you change removeMargins
               removeMargins: false,
@@ -75,22 +75,22 @@ class _NavigationPageState extends State<NavigationPage> {
                 BottomBarItem(
                   inActiveItem: Icon(
                     Icons.home_filled,
-                    color: Colors.white,
+                    color: Color.fromRGBO(125, 124, 124, 1),
                   ),
                   activeItem: Icon(
                     Icons.home_filled,
-                    color: Color.fromARGB(189, 171, 158, 1),
+                    color: Color.fromRGBO(25, 23, 23, 1),
                   ),
                   itemLabel: 'Home',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
                     Icons.person,
-                    color: Colors.white,
+                    color: Color.fromRGBO(125, 124, 124, 1),
                   ),
                   activeItem: Icon(
                     Icons.person,
-                    color: Color.fromARGB(189, 171, 158, 1),
+                    color: Color.fromRGBO(25, 23, 23, 1),
                   ),
                   itemLabel: 'Profile',
                 ),
